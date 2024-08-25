@@ -1,0 +1,94 @@
+
+---
+import { Image } from 'astro:assets';
+import logoinline from '../../../icons/logo_inline.png';
+---
+<div class="navbar">
+    <div class="navbar-logo">
+        <Image class="hideall" src={logoinline} alt="grand theft auto stories" width={270}/>
+    </div>
+    <div class="navbar-elements">
+        <button class="navbar-list selected">GTA Stories</button>
+
+        <button class="navbar-list hidefirst">Información general</button>
+        <button class="navbar-list">Wiki</button>
+        <button class="navbar-list hidefirst">Skin List</button>
+        <button class="navbar-list hidefirst">Discord</button>
+
+    </div>
+    <div class="navbar-auth">
+        <button class="navbar-button hideall">
+                VER TIENDA
+        </button>
+        <button class="navbar-button">
+            PCU
+        </button>
+    </div>
+</div>
+
+<style>
+   .navbar{
+        
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+        padding-left: 5%;
+        padding-right: 5%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.144);
+        z-index: 10;
+   }
+   .navbar-logo{
+        padding-top: 1.5rem;
+   }
+   .navbar-elements{
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+   }
+   .navbar-list{
+        background-color: transparent;
+        border: 0px;
+        color: white;
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+        padding-left: .8rem;
+        padding-right: .8rem;
+        font-size: .9rem;
+        cursor: pointer;
+   }
+   .navbar-list.selected{
+        border-bottom: 2px solid white;
+        font-weight: 500;
+   }
+   .navbar-list:hover{
+        border-bottom: 2px solid white;
+   }
+   .navbar-auth{
+        padding-top: 1rem;
+   }
+   .navbar-button{
+        cursor: pointer;
+        border: 0px;
+        color: white;
+        font-weight: 500;
+        padding: .5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        background-color: rgb(22, 22, 22);
+        border: 1px solid white;
+        border-radius: .4rem;
+   }
+   @media only screen and (max-width: 1150px) {
+        .hidefirst{
+            display: none;
+        }
+        
+    }
+   @media only screen and (max-width: 750px) {
+        .hideall{
+            display:none;
+        }
+    }
+   
+
+</style>

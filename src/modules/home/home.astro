@@ -1,0 +1,39 @@
+---
+import Navbar from "./components/navbar.astro";
+import { Image } from 'astro:assets';
+import wallpaper from './../../icons/wallpaper.png';
+import logo from './../../icons/logo.png';
+
+---
+<div class="dashboard-content">
+    <Navbar/>
+    <div class="relative">
+        <Image class="image-background absolute hideall" src={wallpaper} alt="wallpaper"/>
+        <div class="dashboard-container">
+            <Image class="" src={logo} width={250} alt="logo"/>
+            <h1 class="white fz2">Grand Theft Auto Stories</h1>
+            <h3 class="white">Disfruta jugando nuestro servidor en linea para el modo <br/>
+            de juego Gran Theft The Auto San Andreas. Compra una empresa<br/>
+            y contrata empleados, haz ganancias con tus negocios, mantente<br/> 
+            seguro en una casa. El limite eres tú. unete a nuestro discord<br/>
+             para no perderte ninguna novedad sobre el lanzamiento.</h3>
+        </div>
+    </div>
+
+</div>
+<style>
+    .image-background{
+        opacity: 0.6;
+        z-index:-1;
+        max-width: 100vw;
+        width: 100%;
+    }
+    @media only screen and (max-width: 750px) {
+        .hideall{
+            display: none;
+        }
+    }
+
+</style>
+
+  
